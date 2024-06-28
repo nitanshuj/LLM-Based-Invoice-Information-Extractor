@@ -22,10 +22,10 @@ def input_image_details(uploaded_file):
         bytes_data = uploaded_file.getvalue()
         image_parts = [
             {
-                "mimi_type": uploaded_file.type,    # Get the mime type of the uploaded file.
-                "data": bytes_data,                 # Get the bytes of the uploaded file.
+                "mime_type": uploaded_file.type,    # Get the mime type of the uploaded file.
+                "data": bytes_data                 # Get the bytes of the uploaded file.
             }]
-            return image_parts
+        return image_parts
     else:
         raise FileNotFoundError("No file has been uploaded")
 
